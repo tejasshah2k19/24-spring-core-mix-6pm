@@ -2,8 +2,8 @@ package com.bean;
 
 public class UserBean {
 
-	private String firstName;
-	private String lastName;
+	private String firstName;//admin1
+	private String lastName;//admin2
 
 	public UserBean(){
 		System.out.println("UserBean()");

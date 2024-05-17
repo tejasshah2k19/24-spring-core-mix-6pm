@@ -4,7 +4,30 @@
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+	<bean id="userBean" class="com.bean.UserBean">
+		<property name="firstName" value="admin1"/>
+		<property name="lastName" value="admin2"/>
+	</bean>
 	
-	<bean id="userBean" class="com.bean.UserBean"></bean>
+	
+	<bean id="studentBean" class="com.bean.StudentBean" scope="prototype"></bean>
+	
+	
+	<bean class="com.bean.EmployeeBean" id="empBean">
+		<property name="firstName" value="ABC"></property>
+		<property name="lastName" value="XYZ"></property>
+		<!-- <property name="address" ref="addressBean"></property> -->
+		<constructor-arg ref="addressBean"></constructor-arg>
+	</bean>
+	
+	<bean class="com.bean.AddressBean" id="addressBean">
+		<property name="stLine" value="abc xyz"></property>
+		<property name="state" value="GJ"></property>
+		<property name="city" value="AHD"></property>
+	</bean>
+	
+	 
+	
 
 </beans>
